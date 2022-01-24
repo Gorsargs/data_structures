@@ -22,6 +22,26 @@ class Queue {
       this.tail = null;
     }
   }
+
+  reverse() {
+    let tailPrev = null;
+    let tail = this.tail;
+    
+    if(this.head){
+      this.tail.next = this.head;
+      tailPrev = this.tail;
+      this.head = this.head.next;
+      this.tail = this.tail.next;
+      this.tail.next = null
+      while(this.head !== tail){
+        let tempHead = this.head;
+        this.head = this.head.next;
+        tempHead.next = tailPrev.next;
+        tailPrev.next = tempHead;
+      }
+    }
+  }
+
 }
 
 class Node {
@@ -32,3 +52,23 @@ class Node {
 }
 
 const queue = new Queue();
+
+queue.add("1")
+queue.add("2")
+queue.add("3")
+queue.add("4")
+queue.add("5")
+
+
+
+
+
+queue.reverse();
+queue.reverse();
+
+console.log(queue.head)
+console.log(queue.head.next)
+console.log(queue.head.next.next)
+
+
+console.log(queue)
