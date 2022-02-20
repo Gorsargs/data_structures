@@ -3,7 +3,7 @@ class LinkedList {
     this.head = null;
   }
 
-  add(value) {
+  insert(value) {
     this.head = new Node(value, this.head);
   }
 
@@ -14,7 +14,7 @@ class LinkedList {
     return;
   }
 
-  find(value) {
+  search(value) {
     let tempNode = this.head;
     while (tempNode != null) {
       if (tempNode.value === value) {
@@ -33,4 +33,6 @@ class Node {
   }
 }
 
-const linkedList = new LinkedList();
+export default LinkedList;
+
+

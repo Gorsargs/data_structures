@@ -4,9 +4,9 @@ class Queue {
     this.tail = null;
   }
 
-  add(value) {
+  enqueue(value) {
     if (this.head === null) {
-      this.head = new Node(value, this.tail);
+      this.head = new Node(value, null);
       this.tail = this.head;
     } else {
       this.tail.next = new Node(value, null);
@@ -14,7 +14,7 @@ class Queue {
     }
   }
 
-  delete() {
+  dequeue() {
     if (this.head !== this.tail) {
       this.head = this.head.next;
     } else {
@@ -35,7 +35,7 @@ class Queue {
         this.tail = tempHead;
       }
     }
-  }
+  }  
 }
 
 class Node {
@@ -46,4 +46,3 @@ class Node {
 }
 
 const queue = new Queue();
-

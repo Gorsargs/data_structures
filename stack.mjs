@@ -13,7 +13,7 @@ class Stack {
     }
   }
 
-  pop(value) {
+  pop() {
     if (this.head === this.tail) {
       this.head = null;
       this.tail = null;
