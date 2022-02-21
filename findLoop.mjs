@@ -1,3 +1,5 @@
+//Floyd's algorithm
+
 function findLoop (linkedList) {
   
   let slowNode = linkedList.head;
