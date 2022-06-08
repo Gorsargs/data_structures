@@ -35,7 +35,7 @@ class Queue {
         this.tail = tempHead;
       }
     }
-  }  
+  }
 }
 
 class Node {
